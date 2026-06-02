@@ -74,9 +74,9 @@
         }
 
         /* Table Base Styles */
-        table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; }
-        th { font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding: 16px; text-align: center; font-size: 0.85rem; }
-        td { padding: 16px; text-align: center; border-bottom: 1px solid #f1f5f9; font-weight: 500; font-size: 0.9rem;}
+        table { border-collapse: separate; border-spacing: 0; border-radius: 12px; }
+        th { font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding: 16px; text-align: center; font-size: 0.85rem; whitespace: nowrap; }
+        td { padding: 16px; text-align: center; border-bottom: 1px solid #f1f5f9; font-weight: 500; font-size: 0.9rem; whitespace: nowrap; }
         tr:last-child td { border-bottom: none; }
     </style>
 </head>
@@ -84,7 +84,7 @@
 
     <div class="max-w-[1000px] mx-auto space-y-8">
 
-        <!-- HEADER (Replicating 4.06.04 PM) -->
+        <!-- HEADER -->
         <header class="bg-brand-purple text-white py-16 px-6 text-center rounded-[2.5rem] shadow-lg relative overflow-hidden">
             <div class="relative z-10">
                 <p class="text-brand-yellow font-bold text-sm tracking-[0.2em] uppercase mb-4">Pai Layout Center</p>
@@ -97,7 +97,7 @@
             </div>
         </header>
 
-        <!-- TIMINGS SECTION (Replicating 4.06.04 PM) -->
+        <!-- TIMINGS SECTION -->
         <section class="info-card">
             <div class="flex items-center gap-3 mb-6">
                 <div class="bg-brand-yellow p-2.5 rounded-xl">
@@ -106,8 +106,9 @@
                 <h2 class="text-2xl font-bold text-brand-purple">Batch Timings</h2>
             </div>
             
-            <div class="border border-gray-100 rounded-xl overflow-hidden">
-                <table>
+            <!-- FIXED: Added overflow-x-auto and min-w-[600px] to force horizontal scrolling on mobile -->
+            <div class="border border-gray-100 rounded-xl overflow-x-auto w-full">
+                <table class="w-full min-w-[600px]">
                     <thead>
                         <tr class="bg-brand-purple text-white">
                             <th class="text-left pl-6">CLASS</th>
@@ -146,7 +147,7 @@
             </div>
         </section>
 
-        <!-- GUIDELINES FOR PARENTS (Replicating 4.17.27 PM - Yellow Border) -->
+        <!-- GUIDELINES FOR PARENTS -->
         <section class="info-card border-t-8 border-t-brand-yellow">
             <div class="flex items-center gap-3 mb-8">
                 <div class="bg-brand-purple p-2.5 rounded-xl">
@@ -155,9 +156,7 @@
                 <h2 class="text-2xl font-bold text-brand-purple">Guidelines For Parents</h2>
             </div>
 
-            <!-- 2-Column Grid exactly as requested -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-                
                 <!-- Column 1 -->
                 <div class="space-y-6">
                     <div class="rule-item">
@@ -259,11 +258,10 @@
                         <p>Send a clean napkin daily. Parents should not handhold children during home assignments.</p>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- GENERAL GUIDELINES (Replicating 4.17.17 PM - Indigo Border) -->
+        <!-- GENERAL GUIDELINES -->
         <section class="info-card border-t-8 border-t-indigo-500">
             <div class="flex items-center gap-3 mb-8">
                 <div class="bg-indigo-100 p-2.5 rounded-xl">
@@ -300,10 +298,10 @@
             </div>
         </section>
 
-        <!-- TRANSPORT HUB (Replicating 4.17.08 PM - Split Green/Orange) -->
+        <!-- TRANSPORT HUB -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- Transport Policies (Green) -->
+            <!-- Transport Policies -->
             <section class="info-card border-t-8 border-t-green-400">
                 <div class="flex items-center gap-3 mb-8">
                     <div class="bg-green-100 p-2.5 rounded-xl">
@@ -340,7 +338,7 @@
                 </div>
             </section>
 
-            <!-- 3rd Party Auto/Cab (Orange) -->
+            <!-- 3rd Party Auto/Cab -->
             <section class="info-card border-t-8 border-t-orange-400 bg-orange-50/30">
                 <div class="flex items-center gap-3 mb-6">
                     <div class="bg-orange-100 p-2.5 rounded-xl">
@@ -349,14 +347,13 @@
                     <h2 class="text-xl font-bold text-orange-900">3rd Party Auto/Cab</h2>
                 </div>
 
-                <!-- Alert Pill -->
                 <div class="bg-orange-100 text-orange-800 text-center text-sm font-semibold py-2.5 rounded-lg mb-6 border border-orange-200">
                     Advance: ₹2000 (Non-Refundable)
                 </div>
 
-                <!-- Orange Table -->
-                <div class="border border-orange-200 rounded-xl overflow-hidden shadow-sm">
-                    <table>
+                <!-- FIXED: Added overflow-x-auto and min-w-[400px] -->
+                <div class="border border-orange-200 rounded-xl overflow-x-auto shadow-sm w-full">
+                    <table class="w-full min-w-[400px]">
                         <thead>
                             <tr class="bg-[#f97316] text-white">
                                 <th class="text-left pl-6">DISTANCE (KMS)</th>
