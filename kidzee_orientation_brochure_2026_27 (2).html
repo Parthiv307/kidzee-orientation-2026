@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIDZEE Pai Layout | Parent Orientation 2026-27</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#5e2b97',
+                            yellow: '#ffde00',
+                            bg: '#f8f9fa'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Exact background from the screenshots */
+        body { 
+            background-color: #f4f2f7; 
+            background-image: radial-gradient(#d1d5db 1px, transparent 1px); 
+            background-size: 20px 20px; 
+            color: #334155;
+        }
+        
+        /* Card base styles mirroring the images */
+        .info-card { 
+            background: white; 
+            border-radius: 1.5rem; 
+            padding: 2rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid #f1f5f9;
+        }
+
+        /* Circular Checkmark styling */
+        .check-circle {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4px;
+        }
+        .check-circle svg { width: 12px; height: 12px; color: white; stroke-width: 3; }
+        
+        /* Two-column layout item */
+        .rule-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            font-size: 0.875rem; /* 14px */
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* Highlight block */
+        .highlight-yellow {
+            background-color: #fef08a; /* Soft yellow */
+            padding: 10px 12px;
+            border-radius: 8px;
+            margin: -10px -12px; /* Offset padding to align with other text */
+        }
+
+        /* Table Base Styles */
+        table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden; }
+        th { font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding: 16px; text-align: center; font-size: 0.85rem; }
+        td { padding: 16px; text-align: center; border-bottom: 1px solid #f1f5f9; font-weight: 500; font-size: 0.9rem;}
+        tr:last-child td { border-bottom: none; }
+    </style>
+</head>
+<body class="antialiased py-8 px-4 md:px-8">
+
+    <div class="max-w-[1000px] mx-auto space-y-8">
+
+        <!-- HEADER (Replicating 4.06.04 PM) -->
+        <header class="bg-brand-purple text-white py-16 px-6 text-center rounded-[2.5rem] shadow-lg relative overflow-hidden">
+            <div class="relative z-10">
+                <p class="text-brand-yellow font-bold text-sm tracking-[0.2em] uppercase mb-4">Pai Layout Center</p>
+                <h1 class="text-5xl md:text-6xl font-black mb-6 tracking-tight">
+                    KIDZEE <span class="text-brand-yellow">Orientation</span>
+                </h1>
+                <div class="inline-block bg-white text-brand-purple font-bold text-sm md:text-base px-6 py-2 rounded-full shadow-sm">
+                    Academic Year 2026-27
+                </div>
+            </div>
+        </header>
+
+        <!-- TIMINGS SECTION (Replicating 4.06.04 PM) -->
+        <section class="info-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="bg-brand-yellow p-2.5 rounded-xl">
+                    <svg class="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h2 class="text-2xl font-bold text-brand-purple">Batch Timings</h2>
+            </div>
+            
+            <div class="border border-gray-100 rounded-xl overflow-hidden">
+                <table>
+                    <thead>
+                        <tr class="bg-brand-purple text-white">
+                            <th class="text-left pl-6">CLASS</th>
+                            <th>1ST BATCH</th>
+                            <th>2ND BATCH</th>
+                            <th>SINGLE BATCH</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                        <tr>
+                            <td class="text-left pl-6 font-bold text-gray-800">Play Group</td>
+                            <td>9:30 - 12:15</td>
+                            <td>11:00 - 1:45</td>
+                            <td class="text-gray-400">-</td>
+                        </tr>
+                        <tr class="bg-gray-50/50">
+                            <td class="text-left pl-6 font-bold text-gray-800">Nursery</td>
+                            <td>9:30 - 12:30</td>
+                            <td>11:00 - 1:45</td>
+                            <td class="text-gray-400">-</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left pl-6 font-bold text-gray-800">Jr. Kg</td>
+                            <td class="text-gray-400">-</td>
+                            <td class="text-gray-400">-</td>
+                            <td class="font-bold text-brand-purple">9:00 - 1:20</td>
+                        </tr>
+                        <tr class="bg-gray-50/50">
+                            <td class="text-left pl-6 font-bold text-gray-800">Sr. Kg</td>
+                            <td class="text-gray-400">-</td>
+                            <td class="text-gray-400">-</td>
+                            <td class="font-bold text-brand-purple">9:00 - 1:30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- GUIDELINES FOR PARENTS (Replicating 4.17.27 PM - Yellow Border) -->
+        <section class="info-card border-t-8 border-t-brand-yellow">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="bg-brand-purple p-2.5 rounded-xl">
+                    <svg class="w-6 h-6 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </div>
+                <h2 class="text-2xl font-bold text-brand-purple">Guidelines For Parents</h2>
+            </div>
+
+            <!-- 2-Column Grid exactly as requested -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                
+                <!-- Column 1 -->
+                <div class="space-y-6">
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>KIDZEE Pai layout operates for <strong>5 days a week</strong>, from Monday to Friday.</p>
+                    </div>
+                    
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Parents and guardians are not allowed to visit children or facilitators during class hours. Please approach the Center Head in the office for emergencies.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>CCTV is for security purposes; daily viewing is not allowed. In an emergency, submit a written application to view footage during 'after school hours'.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>For transfers to another KIDZEE center, submit a duly filled Transfer Form (available in the Almanac) to the Center Head.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>The Leaving Certificate and Milestones will only be issued upon application and clearance of all outstanding fees.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Tuition Fees must be paid in advance per term. Fees are non-refundable even if the child leaves immediately after admission.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Encourage wards to be regular and punctual. Inform the center of any long absences.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Do not send wards to school if they are suffering from any ailment. Absence of >2 weeks without info leads to admission withdrawal.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Send children in neat uniforms and school shoes (Mandatory for Playgroup, Nursery, JKG, SKG).</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>PG & Nursery wear uniforms Mon/Wed/Fri. KG children wear uniforms all 5 days and on special occasions.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Send extra set of clothes, undergarments, and a hand towel daily. Provide a fresh handkerchief (do not pin to dress).</p>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="space-y-6">
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Show the <strong>Escort Card</strong> at dispersal; without it, the child will not be allowed to leave.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Check the WhatsApp Broadcast group daily for notes. Observations will be updated on the Kidzee app.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Parents are requested to wear formal attire when visiting school premises.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Label every item (bag, lunch box, water bottle, etc.).</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Send healthy, nutritious <strong>vegetarian food</strong>. Avoid junk food. <em>Non-veg is not allowed.</em> Send appropriate quantities; overfeeding causes discomfort.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Syllabus provided during culmination. Please recapitulate at home playfully, without stress.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>No Paper-Pencil Exams! Assessment is through Continuous and Comprehensive Evaluation (CCE).</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Milestones shared on Culmination Meet days. Both parents are advised to attend Parent Teacher Meetings.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Submit a medical fitness certificate if absent for >2 days due to illness.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Do not wear expensive gold/silver ornaments. School is not responsible for misplacement.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>No feeding bottles; use proper water bottles/sippers. No diapers after settlement period; cooperate in toilet training.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-brand-purple"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Send a clean napkin daily. Parents should not handhold children during home assignments.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GENERAL GUIDELINES (Replicating 4.17.17 PM - Indigo Border) -->
+        <section class="info-card border-t-8 border-t-indigo-500">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="bg-indigo-100 p-2.5 rounded-xl">
+                    <svg class="w-6 h-6 text-indigo-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h2 class="text-2xl font-bold text-indigo-900">General Guidelines</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                <div class="rule-item">
+                    <div class="check-circle bg-indigo-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                    <p>If a student is suffering from cold, cough or fever, please don't send them to school till they recover.</p>
+                </div>
+                <div class="rule-item">
+                    <div class="check-circle bg-indigo-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                    <p>Parents/Guardians are not expected to visit their child in classrooms during operating hours unless invited.</p>
+                </div>
+                <div class="rule-item">
+                    <div class="check-circle bg-indigo-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                    <p>Notebooks and textbooks should be neatly covered with transparent covers, labeled, and submitted within a week.</p>
+                </div>
+                <div class="rule-item">
+                    <div class="check-circle bg-indigo-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                    <p>Student's belongings (lunch bag, notebooks, shoes) must be labeled with the student's name to avoid confusion.</p>
+                </div>
+                <div class="rule-item">
+                    <div class="check-circle bg-indigo-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                    <p>Ensure your child does not carry valuable items (smartwatches, jewelry). Management is not responsible for loss.</p>
+                </div>
+                <div class="rule-item">
+                    <div class="check-circle bg-indigo-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                    <p>Parents should ensure the child dedicates quality time to completing home assignments and projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSPORT HUB (Replicating 4.17.08 PM - Split Green/Orange) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Transport Policies (Green) -->
+            <section class="info-card border-t-8 border-t-green-400">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="bg-green-100 p-2.5 rounded-xl">
+                        <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path></svg>
+                    </div>
+                    <h2 class="text-xl font-bold text-green-900">Transport Policies</h2>
+                </div>
+                
+                <div class="space-y-5">
+                    <div class="rule-item">
+                        <div class="check-circle bg-green-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Vehicle and driver details will be shared with parents.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-green-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Do not communicate with the driver directly. Contact the Center Head anytime (+91 8904456611).</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-green-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Students must be on-time at the pick point. The van will not wait as it affects other students.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-green-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Transport fee must be paid prior to availing the service.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-green-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Inform the person picking up the student at drop-time. ID proof must be provided to the driver/caretaker.</p>
+                    </div>
+                    <div class="rule-item">
+                        <div class="check-circle bg-green-500"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div>
+                        <p>Communicate any changes (leave, withdrawal) directly to the Center Head.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3rd Party Auto/Cab (Orange) -->
+            <section class="info-card border-t-8 border-t-orange-400 bg-orange-50/30">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="bg-orange-100 p-2.5 rounded-xl">
+                        <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h2 class="text-xl font-bold text-orange-900">3rd Party Auto/Cab</h2>
+                </div>
+
+                <!-- Alert Pill -->
+                <div class="bg-orange-100 text-orange-800 text-center text-sm font-semibold py-2.5 rounded-lg mb-6 border border-orange-200">
+                    Advance: ₹2000 (Non-Refundable)
+                </div>
+
+                <!-- Orange Table -->
+                <div class="border border-orange-200 rounded-xl overflow-hidden shadow-sm">
+                    <table>
+                        <thead>
+                            <tr class="bg-[#f97316] text-white">
+                                <th class="text-left pl-6">DISTANCE (KMS)</th>
+                                <th>FEES (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr>
+                                <td class="text-left pl-6 font-medium text-gray-700">0 to 2</td>
+                                <td class="font-bold text-[#f97316]">2000</td>
+                            </tr>
+                            <tr class="bg-orange-50/50">
+                                <td class="text-left pl-6 font-medium text-gray-700">2.1 to 4</td>
+                                <td class="font-bold text-[#f97316]">3000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left pl-6 font-medium text-gray-700">4.1 to 5</td>
+                                <td class="font-bold text-[#f97316]">4000</td>
+                            </tr>
+                            <tr class="bg-orange-50/50">
+                                <td class="text-left pl-6 font-medium text-gray-700">5.1 to 6</td>
+                                <td class="font-bold text-[#f97316]">5000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <footer class="mt-12 text-center text-gray-400 text-xs font-medium pb-8">
+        &copy; 2026-27 Kidzee Pai Layout. All rights reserved.
+    </footer>
+
+</body>
+</html>
